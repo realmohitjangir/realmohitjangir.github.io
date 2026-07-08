@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#050505"/>
+  <circle cx="1100" cy="80" r="4" fill="#3B82F6"/>
+  <text x="80" y="320" font-family="monospace" font-size="56" fill="#FFFFFF">Mohit Jangir</text>
+  <text x="80" y="380" font-family="monospace" font-size="28" fill="#A1A1AA">Machine Learning Engineer</text>
+</svg>

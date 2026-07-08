@@ -1,0 +1,28 @@
+/* ==========================================================================
+   stars.css — Canvas star-field container. Actual particles are drawn on
+   <canvas> in js/stars.js; this file only positions/blends the layer.
+   ========================================================================== */
+
+#stars-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-stars);
+  pointer-events: none;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+
+[data-theme="light"] #stars-canvas {
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}
+
+.stars-vignette {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-stars);
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, transparent 40%, var(--color-bg) 92%);
+}

@@ -1,0 +1,147 @@
+/* ==========================================================================
+   responsive.css — Mobile-first breakpoints
+   Base styles (outside media queries) target the smallest screens.
+   Breakpoints reference: 320 / 375 / 425 / 768 / 1024 / 1280 / 1440 / 1920
+   ========================================================================== */
+
+/* ---- Base (mobile, <768px) ---- */
+.hero-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  text-align: left;
+}
+
+.hero-visual {
+  order: -1;
+}
+
+.profile-frame {
+  width: min(280px, 70vw);
+  margin-inline: auto;
+}
+
+.about-grid {
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.about-values {
+  grid-template-columns: 1fr;
+}
+
+.projects-grid {
+  grid-template-columns: 1fr;
+}
+
+.tech-groups {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.certs-grid {
+  grid-template-columns: 1fr;
+}
+
+.hero-actions .btn {
+  width: 100%;
+}
+
+.nav-links {
+  display: none;
+}
+
+.nav-toggle {
+  display: flex;
+}
+
+.footer-inner {
+  flex-direction: column;
+  text-align: center;
+}
+
+section {
+  padding-block: var(--space-8);
+}
+
+/* ---- 425px ---- */
+@media (min-width: 425px) {
+  .hero-actions .btn {
+    width: auto;
+  }
+}
+
+/* ---- 768px : tablet ---- */
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-values {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  section {
+    padding-block: var(--space-9);
+  }
+}
+
+/* ---- 1024px : desktop nav returns ---- */
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    text-align: left;
+  }
+
+  .hero-visual {
+    order: 0;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .certs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section {
+    padding-block: var(--space-10);
+  }
+}
+
+/* ---- 1280px : full tech grid ---- */
+@media (min-width: 1280px) {
+  .tech-groups {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ---- 1920px : cap breathing room ---- */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* ---- Touch devices: disable cursor + magnetic effects ---- */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-glow {
+    display: none !important;
+  }
+}
